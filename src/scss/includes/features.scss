@@ -1,0 +1,163 @@
+.features {
+
+    &_pos {
+        margin-top: 10vw;
+
+        @media screen and (max-width: 479.98px) {
+            margin-top: 40vw;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1023.98px) {
+            flex-direction: column;
+        }
+    }
+
+    // .features__items
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        width: 55.4vw;
+
+        @media screen and (max-width: 1023.98px) {
+            width: 100%;
+            margin-top: 4vw;
+        }
+
+        @media screen and (max-width: 479.98px) {
+            flex-direction: column;
+            margin-top: 13vw;
+        }
+    }
+
+    // .features__item
+
+    &__item {
+        width: 17.5vw;
+        height: 17.5vw;
+        background-color: $over-bg;
+        box-shadow: $shadow-lg;
+        padding-top: 3.2vw;
+        padding-left: 1.3vw;
+        padding-right: 1.3vw;
+
+        @media screen and (max-width: 1023.98px) {
+            width: 28.5vw;
+            height: 28.5vw;
+            padding-top: 5.2vw;
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
+
+        @media screen and (max-width: 479.98px) {
+            display: flex;
+            align-items: center;
+            width: 92vw;
+            height: 35vw;
+            padding-top: 0;
+            padding-right: 0;
+            padding-left: 8vw;
+            margin-bottom: 2.8vw;
+        }
+    }
+
+    // .features__img
+
+    &__img {
+        width: 22%;
+        height: 22%;
+        margin-left: 1.5vw;
+
+        &>svg {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 479.98px) {
+            width: 13.3vw;
+            height: 13.3vw;
+            margin-right: 8vw;
+        }
+    }
+
+    // .features__name
+
+    &__name {
+        margin-top: 1.8vw;
+
+        @media screen and (max-width: 1023.98px) {
+            margin-top: 2.7vw;
+        }
+    }
+
+    // .features__descr
+
+    &__descr {
+        margin-top: 1.2vw;
+
+        @media screen and (max-width: 1023.98px) {
+            margin-top: 1.5vw;
+        }
+    }
+}
+
+.title {
+
+    // .title__text
+
+    &__text {
+        width: 18.4vw;
+        margin-top: 1vw;
+        font-family: Lato;
+        font-weight: 800;
+        font-size: 2.6vw;
+        line-height: 115%;
+        color: $text;
+
+        @media screen and (max-width: 1023.98px) {
+            width: auto;
+            font-size: 3.3vw;
+        }
+
+        @media screen and (max-width: 479.98px) {
+            width: auto;
+            font-size: 7.8vw;
+        }
+    }
+}
+
+.subtitle {
+    font-family: Lato;
+    font-weight: 800;
+    font-size: 1.3vw;
+    line-height: 115%;
+    color: $text;
+
+    @media screen and (max-width: 1023.98px) {
+        font-size: 2vw;
+    }
+
+    @media screen and (max-width: 479.98px) {
+        font-size: 5vw;
+    }
+}
+
+.main-text {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 130%;
+    color: $text;
+
+    @media screen and (max-width: 1023.98px) {
+        font-size: 1.7vw;
+    }
+
+    @media screen and (max-width: 479.98px) {
+        font-size: 3.9vw;
+    }
+}

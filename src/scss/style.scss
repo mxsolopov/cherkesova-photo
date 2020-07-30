@@ -6,6 +6,7 @@
 
 
 @include createFontFace($font-family, $fonts);
+@include button-reset;
 
 body {
     background-color: $bg;
@@ -25,4 +26,6 @@ body {
     }
 }
 
-@import './includes/hero.scss';
+@import './includes/hero';
+@import './includes/features';
+@import './includes/gallery';

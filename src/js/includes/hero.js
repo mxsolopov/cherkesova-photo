@@ -1,4 +1,4 @@
-export const heroSection = (function () {
+export const hero = (function () {
 
     // 'use strict';
 

@@ -1,0 +1,27 @@
+//- Шаблон изображения для галереи
+mixin galleryImg(path, name, link, linkname, descr, year)
+    .gallery__slide
+        img(src=path).gallery__img
+        .gallery__about
+            .gallery__person
+                .gallery__person-name.subtitle
+                    | #{name}
+                a(href=link).gallery__person-link.subtitle
+                    | #{linkname}
+            .gallery__descr
+                .gallery__descr-content.main-text
+                    | #{descr}
+                .gallery__descr-year
+                    | #{year}
+        .gallery__slide-prev
+            <svg fill="#191114" width="40%" height="40%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490" style="transform: rotate(-180deg);">
+            <polygon points="268.814,217.052 0,217.052 0,262.989 268.814,262.989 268.814,399.88 490,245 268.814,90.12 "/>
+            </svg>
+        .gallery__slide-next
+            <svg fill="#191114" width="40%" height="40%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490">
+            <polygon points="268.814,217.052 0,217.052 0,262.989 268.814,262.989 268.814,399.88 490,245 268.814,90.12 "/>
+            </svg>
+        .gallery__slide-close
+        .gallery__number
+            .gallery__number-sum.main-text
+            .gallery__number-curr.main-text

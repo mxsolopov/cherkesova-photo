@@ -2,9 +2,9 @@
 
     &_pos {
         height: 100vh;
-        padding: 4vh 0 8vh 0;
+        padding-top: 4vh;
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1279.98px) {
             height: auto;
             padding-bottom: 0;
         }
@@ -42,7 +42,6 @@
         }
 
         &:hover {
-            cursor: crosshair;
 
             .hero__img {
                 transform: translateY(0);
@@ -121,43 +120,6 @@
         }
     }
 
-    // .hero__subtitle
-
-    &__subtitle {
-        display: flex;
-        align-items: center;
-
-        span {
-            font-weight: 400;
-            font-size: 1vw;
-            line-height: 115%;
-            letter-spacing: 0.04em;
-            color: $text;
-
-            @media screen and (max-width: 1023.98px) {
-                font-size: 1.7vw;
-            }
-
-            @media screen and (max-width: 479.98px) {
-                font-size: 3.3vw;
-            }
-        }
-
-        &::before {
-            content: "";
-            display: block;
-            width: 4%;
-            height: 1px;
-            background-color: $text;
-            margin-right: 2%;
-
-            @media screen and (max-width: 1023.98px) {
-                width: 5.6vw;
-                margin-right: 3.3vw;
-            }
-        }
-    }
-
     // .hero__title
 
     &__title {
@@ -224,6 +186,10 @@
 
     &__logo {
         width: 3vw;
+
+        &>svg {
+            width: 100%;
+        }
 
         @media screen and (max-width: 1023.98px) {
             width: 6.25vw;
@@ -298,6 +264,46 @@
     }
 }
 
+.small-subtitle {
+    display: flex;
+    align-items: center;
+
+    span {
+        font-weight: 400;
+        font-size: 1vw;
+        line-height: 115%;
+        letter-spacing: 0.04em;
+        color: $text;
+
+        @media screen and (max-width: 1023.98px) {
+            font-size: 1.7vw;
+        }
+
+        @media screen and (max-width: 479.98px) {
+            font-size: 3.9vw;
+        }
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 1.8vw;
+        height: 1px;
+        background-color: $text;
+        margin-right: 1vw;
+
+        @media screen and (max-width: 1023.98px) {
+            width: 2.5vw;
+            margin-right: 0.8vw;
+        }
+
+        @media screen and (max-width: 479.98px) {
+            width: 6.7vw;
+            margin-right: 4.2vw;
+        }
+    }
+}
+
 .button {
     display: inline-flex;
     font-weight: 800;
@@ -305,7 +311,7 @@
     line-height: 130%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 5px 0;
+    padding: 5px 5px;
     color: $text;
 
     &_pos {
@@ -320,18 +326,15 @@
         font-size: 3.3vw;
     }
 
-    &:active {
-        letter-spacing: 0.08em;
-    }
-
     &::after {
-        display: inline-block;
-        padding-left: 8%;
+        margin-left: 0.5vw;
         content: "\0279E";
         transition: transform 0.3s ease-out;
     }
 
     &:hover {
+        cursor: pointer;
+
         &::after {
             transform: translateX(16%);
 
