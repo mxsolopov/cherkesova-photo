@@ -343,21 +343,29 @@
             }
         }
     }
-}
 
-.button_rotate {
-    transform: rotate(90deg) translate(70%, 90%);
+    &_rotate {
+        transform: rotate(90deg) translate(70%, 90%);
 
-    @media screen and (max-width: 1023.98px) {
-        transform: rotate(0deg) translate(-3%, 100%);
+        @media screen and (max-width: 1023.98px) {
+            transform: rotate(0deg) translate(-3%, 100%);
+        }
+
+        @media screen and (max-width: 479.98px) {
+            transform: rotate(90deg) translate(0, 0);
+            margin-top: 11vw;
+        }
+
+        &:active {
+            letter-spacing: 0.04em;
+        }
     }
 
-    @media screen and (max-width: 479.98px) {
-        transform: rotate(90deg) translate(0, 0);
-        margin-top: 11vw;
-    }
+    &_order {
+        transform: translateY(120%);
 
-    &:active {
-        letter-spacing: 0.04em;
+        @media screen and (max-width: 479.98px) {
+            transform: translateY(750%);
+        }
     }
 }

@@ -25,3 +25,20 @@ mixin galleryImg(path, name, link, linkname, descr, year)
         .gallery__number
             .gallery__number-sum.main-text
             .gallery__number-curr.main-text
+
+mixin priceBlock(path, name, descr, price)
+    .price-item
+        .price-item__inner
+            .price-item__img
+                img(src=path width="100%" height="100%")
+            .price-item__text
+                h3.price-item__name.subtitle
+                    | #{name}
+                p.price-item__descr.main-text
+                    | #{descr}
+        .price-item__count
+            .price-item__sum
+                span от
+                | #{price}
+            button.button.button_order
+                | Заказать
