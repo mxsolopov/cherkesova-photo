@@ -1,0 +1,19 @@
+section.contact.contact_pos#contact
+    .container
+        .contact__wrap
+            .title
+                .small-subtitle
+                    span Есть вопросы?
+                h2.title__text
+                    | Напиши мне
+                .contact__label
+                    | или звони
+                .contact__phone
+                    | +7 (316) 555-01-16
+            .contact__form
+                form(name="contact-form" class="contact-form" id="contact-form")
+                    input(type="name" class="contact__input contact__input-name" maxlength="256" name="name-input" placeholder="Как тебя зовут?" id="name-input" required)
+                    input(type="email" class="contact__input contact__input-email" maxlength="256" name="email-input" placeholder="Твой e-mail" id="email-input" required)
+                    textarea(class="contact__input contact__input-message" rows="5" name="message-input" placeholder="Сообщение" id="message-input" required)
+                    button.button.button_form(type="submit")
+                        | Отправить

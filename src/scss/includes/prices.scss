@@ -1,10 +1,12 @@
 .prices {
 
     &_pos {
-        margin-top: 13vw;
+        margin-top: 10vw;
+        padding-top: 3vw;
 
         @media screen and (max-width: 1023.98px) {
             margin-top: 17.5vw;
+            padding: 0;
         }
 
         @media screen and (max-width: 479.98px) {
@@ -110,7 +112,7 @@
 
         &__sum {
             display: flex;
-            font-family: Lato;
+            font-family: Lato, sans-serif;
             font-weight: 700;
             font-size: 2.6vw;
             line-height: 115%;

@@ -1,30 +1,40 @@
 export const scrollTop = (function () {
 
-    let goTopBtn = document.querySelector('.back-to-top'),
-        gallery = document.querySelector('.gallery');
+    let link = document.querySelectorAll('a'), // Все ссылки
+        goTopBtn = document.querySelector('.back-to-top'), // Кнопка "Наверх"
+        gallery = document.querySelector('.gallery'); // Блок с фотографиями
 
     window.addEventListener('scroll', () => {
 
-        let scrolled = gallery.offsetTop + window.pageYOffset,
-            coords = document.documentElement.clientHeight * 5;
+        let scrolled = window.pageYOffset, // Расстояние, проскролленное от начала страницы
+            // Точка появления кнопки "Наверх"
+            coordsView = gallery.offsetTop + document.documentElement.clientHeight * 0.5,
+            // Точка исчезновения кнопки "Наверх"
+            coordsUnview = gallery.offsetTop + gallery.clientHeight - document.documentElement.clientHeight * 0.4;
 
-        if (scrolled > coords) {
+        // Добавление кнопки "Наверх"
+        if (scrolled > coordsView && scrolled < coordsUnview) {
             goTopBtn.classList.add('back-to-top_show');
-        }
-        if (scrolled < coords) {
+        } else if (scrolled < coordsView) {
+            goTopBtn.classList.remove('back-to-top_show');
+        } else if (scrolled > coordsUnview) {
             goTopBtn.classList.remove('back-to-top_show');
         }
     });
 
-    goTopBtn.addEventListener('click', function (e) {
+    // Плавный переход между разделами
+    for (let key of link) {
 
-        e.preventDefault();
+        key.addEventListener('click', (e) => {
 
-        const blockID = goTopBtn.getAttribute('href');
+            e.preventDefault();
+            const blockID = key.getAttribute('href');
 
-        document.querySelector(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            document.querySelector(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
-    });
+    }
+
 }());

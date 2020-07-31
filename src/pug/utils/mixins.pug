@@ -26,6 +26,16 @@ mixin galleryImg(path, name, link, linkname, descr, year)
             .gallery__number-sum.main-text
             .gallery__number-curr.main-text
 
+mixin featureBlock(path, name, descr)
+    .features__item
+        .features__img
+            img(src=path width="100%" height="100%")
+        div
+            h3.features__name.subtitle
+                | #{name}
+            p.features__descr.main-text
+                | #{descr}
+
 mixin priceBlock(path, name, descr, price)
     .price-item
         .price-item__inner
