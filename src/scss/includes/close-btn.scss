@@ -1,0 +1,48 @@
+.close-btn,
+.close-btn_mod {
+    display: none;
+    position: absolute;
+    left: 101%;
+    top: 0;
+    width: 2.4vw;
+    height: 2.4vw;
+    opacity: 0.3;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+
+    @media screen and (max-width: 1279.98px) and (orientation: portrait) {
+        width: 7vw;
+        height: 7vw;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30%;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        left: 1vw;
+        content: '';
+        height: 2.4vw;
+        width: 0.1vw;
+        background-color: $text;
+
+        @media screen and (max-width: 1279.98px) and (orientation: portrait) {
+            width: 0.3vw;
+            height: 7vw;
+            left: 50%;
+        }
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}

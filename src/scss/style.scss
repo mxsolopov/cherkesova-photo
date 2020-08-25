@@ -11,6 +11,7 @@
 body {
     background-color: $bg;
     font-family: $font-family, sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -26,9 +27,13 @@ body {
     }
 }
 
+@import './includes/scroll';
+@import './includes/close-btn';
+@import './includes/modal';
 @import './includes/hero';
 @import './includes/features';
 @import './includes/gallery';
 @import './includes/prices';
 @import './includes/contact';
 @import './includes/footer';
+@import './includes/thanx';

@@ -10,7 +10,6 @@ export const slider = (function () {
         img.classList.add('gallery__img_expanded');
         num.classList.add('view-flex');
         close.classList.add('view');
-        close.classList.add('view');
         next.classList.add('gallery__slide-next_view');
         prev.classList.add('gallery__slide-prev_view');
     };
@@ -42,12 +41,12 @@ export const slider = (function () {
                     imgAbout = imgBlock.querySelector('.gallery__about'),
                     image = imgBlock.querySelector('.gallery__img'),
                     number = imgBlock.querySelector('.gallery__number'),
-                    closeBtn = imgBlock.querySelector('.gallery__slide-close'),
+                    closeBtn = imgBlock.querySelector('.close-btn'),
                     bg = document.querySelector('.modal-bg'),
                     nextBtn = imgBlock.querySelector('.gallery__slide-next'),
                     prevBtn = imgBlock.querySelector('.gallery__slide-prev');
 
-                /* Добавлять фон, измнеять состояние скролла,
+                /* Добавлять фон, изменять состояние скролла,
                 открывать/закрывать изображение */
                 bg.classList.toggle('view');
                 document.body.style.overflow = bgState;
@@ -82,7 +81,7 @@ export const slider = (function () {
     imageAction('hidden', 'gallery__about', openImg, 1);
 
     // Закрытие изображения
-    imageAction('', 'gallery__slide-close', closeImg, 0);
+    imageAction('', 'close-btn', closeImg, 0);
 
 
     // Просмотр следующего изображения
@@ -106,17 +105,21 @@ export const slider = (function () {
                 nextImgAbout = nextImgBlock.querySelector('.gallery__about'),
                 nextImage = nextImgBlock.querySelector('.gallery__img'),
                 nextNumber = nextImgBlock.querySelector('.gallery__number'),
-                nextCloseBtn = nextImgBlock.querySelector('.gallery__slide-close'),
+                nextCloseBtn = nextImgBlock.querySelector('.close-btn'),
                 nextNextBtn = nextImgBlock.querySelector('.gallery__slide-next'),
                 nextPrevBtn = nextImgBlock.querySelector('.gallery__slide-prev');
 
             nextImgBlock.classList.add('view_mod');
 
+            if (nextImgBlock.classList.contains('transparent')) {
+                nextImgBlock.classList.remove('transparent');
+            }
+
             // Внутренние элементы блока текущего изображения 
             let imgAbout = imgBlock.querySelector('.gallery__about'),
                 image = imgBlock.querySelector('.gallery__img'),
                 number = imgBlock.querySelector('.gallery__number'),
-                closeBtn = imgBlock.querySelector('.gallery__slide-close'),
+                closeBtn = imgBlock.querySelector('.close-btn'),
                 prevBtn = imgBlock.querySelector('.gallery__slide-prev');
 
             closeImg(imgBlock, imgAbout, image, number, closeBtn, nextBtn, prevBtn);
@@ -129,7 +132,7 @@ export const slider = (function () {
             let imgAbout = imgBlock.querySelector('.gallery__about'),
                 image = imgBlock.querySelector('.gallery__img'),
                 number = imgBlock.querySelector('.gallery__number'),
-                closeBtn = imgBlock.querySelector('.gallery__slide-close'),
+                closeBtn = imgBlock.querySelector('.close-btn'),
                 prevBtn = imgBlock.querySelector('.gallery__slide-prev');
 
             closeImg(imgBlock, imgAbout, image, number, closeBtn, nextBtn, prevBtn);
@@ -139,7 +142,7 @@ export const slider = (function () {
                 firstImgAbout = firstImgBlock.querySelector('.gallery__about'),
                 firstImage = firstImgBlock.querySelector('.gallery__img'),
                 firstNumber = firstImgBlock.querySelector('.gallery__number'),
-                firstCloseBtn = firstImgBlock.querySelector('.gallery__slide-close'),
+                firstCloseBtn = firstImgBlock.querySelector('.close-btn'),
                 firstNextBtn = firstImgBlock.querySelector('.gallery__slide-next'),
                 firstPrevBtn = firstImgBlock.querySelector('.gallery__slide-prev');
 
@@ -169,17 +172,21 @@ export const slider = (function () {
                 previousImgAbout = previousImgBlock.querySelector('.gallery__about'),
                 previousImage = previousImgBlock.querySelector('.gallery__img'),
                 previousNumber = previousImgBlock.querySelector('.gallery__number'),
-                previousCloseBtn = previousImgBlock.querySelector('.gallery__slide-close'),
+                previousCloseBtn = previousImgBlock.querySelector('.close-btn'),
                 previousNextBtn = previousImgBlock.querySelector('.gallery__slide-next'),
                 previousPrevBtn = previousImgBlock.querySelector('.gallery__slide-prev');
 
             previousImgBlock.classList.add('view_mod');
 
+            if (previousImgBlock.classList.contains('transparent')) {
+                previousImgBlock.classList.remove('transparent');
+            }
+
             // Внутренние элементы блока текущего изображения
             let imgAbout = imgBlock.querySelector('.gallery__about'),
                 image = imgBlock.querySelector('.gallery__img'),
                 number = imgBlock.querySelector('.gallery__number'),
-                closeBtn = imgBlock.querySelector('.gallery__slide-close'),
+                closeBtn = imgBlock.querySelector('.close-btn'),
                 nextBtn = imgBlock.querySelector('.gallery__slide-next');
 
             closeImg(imgBlock, imgAbout, image, number, closeBtn, nextBtn, prevBtn);
@@ -192,7 +199,7 @@ export const slider = (function () {
             let imgAbout = imgBlock.querySelector('.gallery__about'),
                 image = imgBlock.querySelector('.gallery__img'),
                 number = imgBlock.querySelector('.gallery__number'),
-                closeBtn = imgBlock.querySelector('.gallery__slide-close'),
+                closeBtn = imgBlock.querySelector('.close-btn'),
                 nextBtn = imgBlock.querySelector('.gallery__slide-next');
 
             closeImg(imgBlock, imgAbout, image, number, closeBtn, nextBtn, prevBtn);
@@ -202,7 +209,7 @@ export const slider = (function () {
                 lastImgAbout = lastImgBlock.querySelector('.gallery__about'),
                 lastImage = lastImgBlock.querySelector('.gallery__img'),
                 lastNumber = lastImgBlock.querySelector('.gallery__number'),
-                lastCloseBtn = lastImgBlock.querySelector('.gallery__slide-close'),
+                lastCloseBtn = lastImgBlock.querySelector('.close-btn'),
                 lastNextBtn = lastImgBlock.querySelector('.gallery__slide-next'),
                 lastPrevBtn = lastImgBlock.querySelector('.gallery__slide-prev');
 

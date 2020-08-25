@@ -1,5 +1,7 @@
-import { hero } from './includes/hero';
-import { galleryTabs } from './includes/galleryTabs';
-import { slider } from './includes/slider';
-import { loadImg } from './includes/loadImg';
-import { scrollTop } from './includes/scrollTop';
+import { animation } from './modules/animation';
+import { hero } from './modules/hero';
+import { galleryTabs } from './modules/galleryTabs';
+import { slider } from './modules/slider';
+import { loadImg } from './modules/loadImg';
+import { scrollTop } from './modules/scrollTop';
+import { modal } from './modules/modal';

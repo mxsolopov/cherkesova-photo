@@ -1,6 +1,6 @@
 export const scrollTop = (function () {
 
-    let link = document.querySelectorAll('a'), // Все ссылки
+    let link = document.querySelectorAll('.smooth'), // Все ссылки
         goTopBtn = document.querySelector('.back-to-top'), // Кнопка "Наверх"
         gallery = document.querySelector('.gallery'); // Блок с фотографиями
 

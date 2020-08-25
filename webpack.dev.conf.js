@@ -7,18 +7,19 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     devtool: 'cheap-eval-source-map',
     devServer: {
 
-        // For mobile device debugging. Firewall must be blocked
+        //For mobile device debugging. Firewall must be blocked
 
-        // hot: true,
-        // host: '192.168.0.113',
-        // port: 7373,
-        // proxy: {
-        //     '/api/**': {
-        //         target: '192.168.0.113:8000',
-        //         secure: false,
-        //         changeOrigin: true,
-        //     }
-        // },
+        hot: true,
+        // host: '192.168.0.113', // LCTC
+        host: '192.168.1.103', // Solopov
+        port: 7373,
+        proxy: {
+            '/api/**': {
+                target: '192.168.1.103:8000',
+                secure: false,
+                changeOrigin: true,
+            }
+        },
 
         // For standard working
 

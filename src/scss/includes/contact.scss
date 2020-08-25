@@ -5,8 +5,8 @@
         padding-top: 3.2vw;
 
         @media screen and (max-width: 479.98px) {
-            margin-top: 26vw;
-            padding: 0;
+            margin-top: 16vw;
+            padding-top: 10vw;
         }
     }
 
@@ -22,6 +22,7 @@
     &__wrap .title {
         width: 15.7vw;
         position: relative;
+        opacity: 0;
 
         @media screen and (max-width: 1023.98px) {
             width: 19.8vw;
@@ -73,6 +74,7 @@
 
     &__form {
         width: 36.5vw;
+        opacity: 0;
 
         @media screen and (max-width: 1023.98px) {
             width: 45.63vw;
@@ -88,42 +90,32 @@
         display: flex;
         flex-direction: column;
     }
+}
 
-    &__input {
-        font-family: Lato, sans-serif;
-        font-weight: 400;
-        font-size: 1vw;
-        color: $text;
-        background: none;
-        border-bottom: 2px solid $text;
+.main-input {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    color: $text;
+    background: none;
+    width: 100%;
+    border-bottom: 2px solid $text;
+    padding: 2%;
+
+    &:nth-child(n+1):nth-child(-n+2) {
         margin-bottom: 4.4vw;
-        padding: 2%;
-
-        @media screen and (max-width: 1023.98px) {
-            font-size: 1.8vw;
-        }
 
         @media screen and (max-width: 479.98px) {
-            font-size: 3.9vw;
-            width: 100%;
             margin-bottom: 18vw;
         }
     }
 
-    &__input-message {
-        margin-bottom: 0;
+    @media screen and (max-width: 1023.98px) {
+        font-size: 1.8vw;
+        resize: none;
     }
 
-    .button_form {
-        align-self: flex-end;
-        margin-top: 1.5vw;
-
-        @media screen and (max-width: 1023.98px) {
-            margin-top: 3.5vw;
-        }
-
-        @media screen and (max-width: 479.98px) {
-            margin-top: 7vw;
-        }
+    @media screen and (max-width: 479.98px) {
+        font-size: 3.9vw;
     }
 }

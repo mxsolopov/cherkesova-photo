@@ -1,0 +1,38 @@
+.modal
+    h3.modal__name.subtitle
+        | Оставить заявку
+    .modal__form
+        form(name="modal-form" class="modal-form" id="modal-form")
+            .modal-form__radio
+                .modal-form__radio-title.main-text
+                    | Тип фотосессии:
+                ul
+                    li
+                        label(for="r-order-1").main-text
+                            | Индивидуальная
+                        input(type="radio" id="r-order-1" name="type-order" value="Индивидуальная" checked)
+                        .check
+                    li
+                        label(for="r-order-2").main-text
+                            | Свадебная
+                        input(type="radio" id="r-order-2" name="type-order" value="Свадебная")
+                        .check
+                    li
+                        label(for="r-order-3").main-text
+                            | Семейная
+                        input(type="radio" id="r-order-3" name="type-order" value="Семейная")
+                        .check
+                    li
+                        label(for="r-order-4").main-text
+                            | Другое
+                        input(type="radio" id="r-order-4" name="type-order" value="Другое")
+                        .check
+
+            .modal-form__input
+                input(type="name" class="main-input modal-input" maxlength="256" name="name" id="modal-name" placeholder="Как тебя зовут?" required)
+                input(type="tel" class="main-input modal-input" maxlength="256" name="phone" id="modal-phone" placeholder="Телефон" required)
+                input(type="email" class="main-input modal-input" maxlength="256" name="email" id="modal-email" placeholder="Твой e-mail" required)
+                textarea(class="main-input modal-input" rows="5" name="message" id="modal-message" placeholder="Комментарий" required)
+                button.button.button_form(type="submit")
+                    | Отправить
+    .modal__close.close-btn_mod.view

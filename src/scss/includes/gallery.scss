@@ -7,7 +7,8 @@
         margin-top: 11vw;
 
         @media screen and (max-width: 479.98px) {
-            margin-top: 25vw;
+            margin-top: 15vw;
+            padding-top: 10vw;
         }
     }
 
@@ -22,12 +23,17 @@
             flex-direction: column;
             align-items: flex-start;
         }
+
+        .title {
+            opacity: 0;
+        }
     }
 
     // .gallery__tabs
 
     &__tabs {
         display: flex;
+        opacity: 0;
 
         @media screen and (max-width: 479.98px) {
             margin: 0;
@@ -62,6 +68,10 @@
 
         &:hover {
             opacity: .7;
+
+            @media screen and (max-width: 1023.98px) {
+                opacity: 1;
+            }
         }
 
         &_active {
@@ -75,6 +85,10 @@
                 animation-name: porfolio_tabs;
                 animation-duration: 0.4s;
                 animation-timing-function: ease-out;
+
+                @media screen and (max-width: 1023.98px) {
+                    display: none;
+                }
             }
         }
 
@@ -105,7 +119,6 @@
             grid-auto-rows: 92vw;
             grid-gap: 4vw;
         }
-
     }
 
     &__about {
@@ -123,6 +136,7 @@
         background: transparent;
         background-image: $gradient;
         transition: all 0.3s ease-in-out;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
         @media screen and (max-width: 1279.98px) {
             opacity: 1;
@@ -135,6 +149,7 @@
         position: relative;
         cursor: pointer;
         background-color: $over-bg;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
         &:hover {
             .gallery__about {
@@ -153,53 +168,6 @@
             left: 50%;
             transform: translate(-50%, -50%);
             box-shadow: $shadow-lg;
-        }
-
-        &-close {
-            display: none;
-            position: absolute;
-            left: 101%;
-            top: 0;
-            width: 2.4vw;
-            height: 2.4vw;
-            opacity: 0.3;
-            transition: all 0.15s ease-in-out;
-
-            @media screen and (max-width: 1279.98px) and (orientation: portrait) {
-                width: 7vw;
-                height: 7vw;
-                left: 50%;
-                transform: translateX(-50%);
-                top: -30%;
-            }
-
-            &:hover {
-                opacity: 1;
-            }
-
-            &:before,
-            &:after {
-                position: absolute;
-                left: 1vw;
-                content: '';
-                height: 2.4vw;
-                width: 0.1vw;
-                background-color: $text;
-
-                @media screen and (max-width: 1279.98px) and (orientation: portrait) {
-                    width: 0.3vw;
-                    height: 7vw;
-                    left: 50%;
-                }
-            }
-
-            &:before {
-                transform: rotate(45deg);
-            }
-
-            &:after {
-                transform: rotate(-45deg);
-            }
         }
 
         &-prev,
@@ -307,6 +275,10 @@
             left: 0;
             position: absolute;
             transition: all 0.3s ease;
+
+            @media screen and (max-width: 1023.98px) {
+                display: none;
+            }
         }
 
         &:hover:after {
@@ -376,6 +348,10 @@
 
 .show {
     display: grid;
+}
+
+.transparent {
+    opacity: 0;
 }
 
 .view-flex {

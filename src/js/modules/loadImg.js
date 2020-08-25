@@ -26,7 +26,7 @@ export const loadImg = (function () {
 
             for (let j = 0; j < tabsContent[i].children.length; j++) {
 
-                tabsContent[i].children[j].classList.add('view');
+                tabsContent[i].children[j].classList.add('view', 'transparent');
             }
 
             // Если в контенте табы больше 9 изображений, то показывать первые 9
@@ -34,7 +34,7 @@ export const loadImg = (function () {
 
             for (let k = 0; k < 9; k++) {
 
-                tabsContent[i].children[k].classList.add('view');
+                tabsContent[i].children[k].classList.add('view', 'transparent');
             }
 
             // Добавлять кнопку "Показать ещё"
@@ -51,6 +51,12 @@ export const loadImg = (function () {
 
         if (target && seeMoreBtn) {
 
+            window.scrollBy({
+                top: 100,
+                left: 0,
+                behavior: "smooth"
+            });
+
             let viewGalleryArray = content.querySelectorAll('.gallery__slide.view'),
                 mainGalleryArray = content.querySelectorAll('.gallery__slide'),
                 numUnviewImg = mainGalleryArray.length - viewGalleryArray.length,
@@ -60,7 +66,7 @@ export const loadImg = (function () {
             if (numUnviewImg <= 6) {
 
                 for (let t = startIndex; t < mainGalleryArray.length; t++) {
-                    mainGalleryArray[t].classList.add('view');
+                    mainGalleryArray[t].classList.add('view', 'transparent');
                 }
 
                 /* Если скрытых изображений больше 6, то при каждом клике
@@ -68,7 +74,7 @@ export const loadImg = (function () {
             } else {
 
                 for (let t = startIndex; t < 6 + startIndex; t++) {
-                    mainGalleryArray[t].classList.add('view');
+                    mainGalleryArray[t].classList.add('view', 'transparent');
                 }
             }
 

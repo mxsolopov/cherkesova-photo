@@ -15,6 +15,10 @@
         @media screen and (max-width: 1023.98px) {
             flex-direction: column;
         }
+
+        .title {
+            opacity: 0;
+        }
     }
 
     // .features__items
@@ -45,6 +49,7 @@
         padding-top: 3.2vw;
         padding-left: 1.3vw;
         padding-right: 1.3vw;
+        opacity: 0;
 
         @media screen and (max-width: 1023.98px) {
             width: 28.5vw;
